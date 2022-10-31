@@ -1,0 +1,180 @@
+Mix of writing my own and using the codesandbox code.
+// async function getPokemonData(url = "https://pokeapi.co/api/v2/pokemon/") {
+// 	const request = await fetch(url);
+// 	const data = await request.json();
+// }
+// getPokemonData();
+
+// function render(string) {
+// 	main.innerHTML = string;
+// 	// main.innerHTML = "Hello";
+// }
+
+// function viewPokemon() {
+// 	return `
+//   <div class="card">
+//   </div>`;
+// }
+
+//
+//
+
+A youtube video try, was not successful
+// fetch("https://pokeapi.co/api/v2/pokemon/")
+// 	.then((response) => {
+// 		return response.json();
+// 	})
+// 	.then((data) => {
+// 		// data = JSON.parse(data);
+// 		console.log(data);
+// 		data.forEach((pokemon) => {
+// 			if (!data) return;
+// 			else {
+// 				console.log(pokemon);
+// 				const markup = `<li>@{pokemon.details}</li>`;
+// 				document.querySelector("ul").insertAdjacentHTML("beforeend", markup);
+// 			}
+// 		});
+// 	});
+
+//
+//
+
+Continuing to try the youtube version
+// fetch("https://pokeapi.co/api/v2/pokemon/")
+// 	.then((response) => {
+// 		console.log(response);
+// 		return response.json();
+// 	})
+// 	.then((data) => {
+// 		// data = []
+// 		data.forEach((pokemon) => {
+// 			document.body.div.innerHTML = pokemon.name;
+// 			// const markup = `<div>${pokemon.details}</div>`;
+// 			// document.getElementById("main").insertAdjacentHTML("afterend", markup);
+// 		});
+// 	})
+// 	.catch((error) => console.error(error));
+
+//
+//
+
+Google is not helpful when you don't know how to google...
+// async function getPokemon() {
+// 	return fetch("https://pokeapi.co/api/v2/pokemon/ditto")
+// 		.then((resp) => resp.json())
+// 		.then((data) => renderPokemon(data));
+// }
+// getPokemon();
+
+//
+//
+
+Back to this again
+// async function getPokemonData(url = "https://pokeapi.co/api/v2/pokemon/") {
+// 	const request = await fetch(url);
+// 	const data = await request.json();
+// 	console.log(getPokemonData());
+// }
+// getPokemonData();
+
+//
+//
+
+Getting somewhere, but not the right where
+// function renderPokemon(getPokemonData) {
+// 	// console.log(getPokemon);
+// 	const main = document.getElementById("main");
+// 	getPokemonData.forEach((pokemon) => {
+// 		return `
+//       <div class="card">
+//        <h3>${pokemon.name}</h3>
+//       <img src="${dataDetails.sprites.front_default}" alt=" "/>
+//       </div>`;
+// 	});
+// }
+// renderPokemon();
+
+//
+//
+
+Trying to combine some codesandbox code..
+// async function getData(url = "https://pokeapi.co/api/v2/pokemon/") {
+// check if we have data in localStorage (and update if needed):
+// pokemonData = getLocalStorageItem(url);
+// if (!pokemonData) {
+// 	const apiData = await getApi(url);
+// 	setLocalStorage(url, apiData);
+// 	pokemonData = apiData;
+// }
+// if (pokemonData.previous == null)
+// 	pokemonData.previous = `https://pokeapi.co/api/v2/pokemon/?offset=${
+// 		pokemonData.count - 20
+// 	}&limit=20`;
+// if (pokemonData.next == null) pokemonData.next = "https://pokeapi.co/api/v2/pokemon/";
+// return pokemonData;
+// }
+// getData();
+
+//
+//
+
+
+This part is not working?
+// async function pokemonData(data, name, sprites) {
+// 	console.log(data);
+// 	if (data) {
+// 		return `
+//       <div class="card">
+//       <h3>${pokemon.name}</h3>
+//       <img src="${dataDetails.sprites.front_default}">
+//       </div>`;
+// 	} else return;
+// }
+// pokemonData();
+// Thoughts: I can fetch the api, and it returns successful as promised. But I cant get it displayed
+// pokemonData is not returning anything at all.. Need to look into this.
+
+//
+//
+
+Back to this method again
+// .then((pokemonData) => {
+// 			console.log(pokemonData);
+// 		})
+// 		.then((myPokemon) => {
+// 			console.log(myPokemon);
+// 			return `
+//         <div class="card">
+//         <h3>${myPokemon.name}</h3>
+//         <img src="${myPokemon.sprites}" alt="#"/>
+//         </div>
+//         `;
+// 		})
+// 		.catch((error) => {
+// 			console.log(error);
+// 		});
+
+//
+//
+
+Unsure what this is, probably just a copy/paste
+// .then((res) => {
+// 			console.log(res);
+// 		})
+// 		.catch((error) => {
+// 			console.log(error);
+// 		});
+
+
+//
+//
+
+This is working, but not ideal as I cant find a way to make it display anything.. It shows in console.
+// async function getPokemonData(url = "https://pokeapi.co/api/v2/pokemon/") {
+// 	const request = await fetch(url);
+// 	const pokemonData = await request.json();
+// 	console.log(request);
+// 	console.log(pokemonData);
+// }
+// getPokemonData();
